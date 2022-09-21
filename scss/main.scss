@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    }
+}
+
+
+@import './secciones/open_intro';
+@import './secciones/navbar';
+@import './secciones/main_home';
+@import './secciones/footer';
+@import './secciones/main_clientes';
+@import './secciones/main_equipos';
+@import './secciones/main_faq';
+@import './secciones/main_contacto';

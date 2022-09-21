@@ -1,0 +1,160 @@
+$starFieldWidth: 2560;
+$starFieldHeight: 2560;
+$starStartOffset: 600px;
+
+$starOneScrollDuration: 100s;
+$starTwoScrollDuration: 125s;
+$starThreeScrollDuration: 175s;
+$numStarOneStars: 1700;
+$numStarTwoStars: 700;
+$numStarThreeStars: 200;
+$numComet: 10;
+
+
+
+.main-container {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .logo {
+        display: flex;
+        margin-top: 20vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        border: white 6px solid;
+        border-radius: 50px;
+        box-shadow: 10px 10px rgba(238, 130, 238, 0.445);
+        background-color: rgba(255, 255, 255, 0.227);
+        flex-direction: column;
+        align-items: center;
+        img {
+        animation-duration: 4s;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 70%;    
+        }
+        a {
+        text-decoration: none;
+        h2 {
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        h2:hover {
+        transition: 300ms;
+        color: rgb(171, 4, 255);
+        scale: 1.2;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    }
+    
+    
+    }
+
+}
+
+@function create-stars($n) {
+    $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+
+    @for $i from 2 through $n {
+    $stars: "#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+    }
+    @return unquote($stars);
+}
+
+@mixin star-template($numStars, $starSize, $scrollSpeed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: create-stars($numStars);
+    animation: animStar $scrollSpeed linear infinite;
+    &:after {
+        content: " ";
+        top: -$starStartOffset;
+        width: $starSize;
+        height: $starSize;
+        border-radius: 50%;
+        position: absolute;
+        background: transparent;
+        box-shadow: create-stars($numStars);
+    }
+}
+
+@mixin shooting-star-template($numStars, $starSize, $speed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+    );
+    animation: animShootingStar $speed linear infinite;
+}
+
+.stars {
+    @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+}
+.stars2 {
+    @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+}
+.stars3 {
+    @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+}
+.comet {
+    @include shooting-star-template($numComet, 5px, 10s);
+
+}
+
+@keyframes animStar {
+    from {
+    transform: translateY(0px);
+    }
+    to {
+    transform: translateY(-#{$starFieldHeight}px)
+    translateX(-#{$starFieldWidth}px);
+    }
+}
+
+@keyframes animShootingStar {
+    from {
+    transform: translateY(0px) translateX(0px) rotate(-45deg);
+    opacity: 1;
+    height: 5px;
+    }
+    to {
+    transform: translateY(-#{$starFieldHeight}px)
+    translateX(-#{$starFieldWidth}px) rotate(-45deg);
+    opacity: 1;
+    height: 800px;
+    }
+}
+
+@media (max-width:425px) {
+    .main-container {
+        .logo {
+        margin-top: 22vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        border: white 2px solid;
+        border-radius: 20px;
+        box-shadow: 3px 3px rgba(238, 130, 238, 0.445);
+        img {
+        width: 90%;
+        }
+        }
+    }
+}

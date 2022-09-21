@@ -1,0 +1,30 @@
+.main-contacto {
+    background-image: url("/img/bck_img.png");
+    a {
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    .contacto {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        label {
+            color: white;
+        }
+        button {
+            background-color: white;
+            color: black;
+        }
+        button:hover {
+            background-color: violet;
+
+        }
+    }
+}
+

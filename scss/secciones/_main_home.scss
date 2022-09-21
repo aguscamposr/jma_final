@@ -1,0 +1,65 @@
+.main_index {
+    background-image: url("/img/bck_img.png");
+    a {
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        margin: 5px;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    .carousel.slide {
+        .carousel-inner {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+        
+        img:hover {
+            transition: 300ms;
+            scale: 1.2;
+            z-index: 2;
+        }
+        .card{
+            background-color: rgba(37, 14, 94, 0.787);
+            .card-text {
+                color: white;
+            }
+        }
+    }
+    .mision {
+        h3 {
+            text-align: center;
+            color: white;
+            margin: 15px;
+            font-weight: 900;
+        }
+        p {
+            width: 60%;
+            margin-top: 10px;
+            color: white;
+            text-align: justify;
+            border: 3px solid white;
+            background-color: rgba(0, 0, 0, 0.556);
+            margin: 0 auto;
+            padding: 9px;
+        }
+    }
+    h3 {
+        text-align: center;
+    color: white;
+    margin: 15px;
+    font-weight: 900;
+    }
+}
