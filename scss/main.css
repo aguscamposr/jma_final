@@ -190,7 +190,7 @@ html body {
   }
 }
 .nav-bar {
-  background-image: url("/img/bck_img.jpg");
+  background-image: url("../img/bck_img.jpg");
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -206,7 +206,7 @@ html body {
   color: rgb(247, 83, 110);
 }
 .nav-bar .navbar .container .nav-item .dropdown-menu {
-  background-image: url("/img/bck_img.jpg");
+  background-image: url("../img/bck_img.jpg");
 }
 .nav-bar .navbar .container .nav-item .dropdown-menu a {
   color: rgb(255, 255, 255);
@@ -240,7 +240,7 @@ html body {
   }
 }
 .main_index {
-  background-image: url("/img/bck_img.jpg");
+  background-image: url("../img/bck_img.jpg");
 }
 .main_index a {
   text-decoration: none;
@@ -320,7 +320,7 @@ html body {
 }
 
 .main_clientes {
-  background-image: url("/img/bck_img.jpg");
+  background-image: url("../img/bck_img.jpg");
 }
 .main_clientes a {
   text-decoration: none;
@@ -372,7 +372,7 @@ html body {
   }
 }
 .main-servicios {
-  background-image: url("/img/bck_img.jpg");
+  background-image: url("../img/bck_img.jpg");
 }
 .main-servicios a {
   text-decoration: none;
@@ -439,7 +439,7 @@ html body {
 }
 
 .main-contacto {
-  background-image: url("/img/bck_img.jpg");
+  background-image: url("../img/bck_img.jpg");
 }
 .main-contacto a {
   text-decoration: none;
