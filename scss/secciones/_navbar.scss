@@ -1,15 +1,10 @@
 .nav-bar {
-    background-image: url("./img/bck_img.jpg");
+    background-image: url("/img/bck_img.jpg");
     display: flex;
     justify-content: center;
     flex-direction: row;
     .navbar {
         .container {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex-direction: row;
             .nav-item {
                 a {
                 color: rgb(255, 255, 255);
