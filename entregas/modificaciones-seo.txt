@@ -1,0 +1,22 @@
+Realice las siguientes modificaciones en el SEO:
+
+Keywords:
+- Index: JMA, video, drone, film, edicion, produccion, screen, display
+- Clientes: marca, aperol, fernet, empresa, pyme
+- Servicios: producir, grabar, video, fiestas, despedidas
+- FAQ: preguntas, respuestas, solucion, detalle, compromiso
+- Contacto: mail, contacto, telefono, whatsapp, llamar
+Description:
+- Index: JMA productora audiovisual creativa
+- Clientes: ayudamos a tu marca a crecer esteticamente
+- Servicios: te ayudamos a resolver necesidades audiovisuales
+- FAQ: preguntas frecuentes que puedes realizar
+- Contacto: dejanos tu mensaje
+Formato de Imagenes:
+- Se bajo el peso de cada imagen, se comprimieron las imagenes aplicadas al carousel.
+Sitemap:
+- Se creo el sitemap en xml
+Responsive:
+- Se probo el sitio en https://search.google.com/test/mobile-friendly y dio resultado full responsive.
+Navegabilidad:
+- Se crearon bread crumbs para cada html mejorando la navegabilidad del usuario.
